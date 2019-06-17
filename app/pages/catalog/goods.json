@@ -1,0 +1,26 @@
+{
+    "11929": {
+    "name" : "Коретка",
+    "cost" : "2100",
+    "description" : "Ультро легкая, для проф. спорта",
+    "image" : "pages/catalog/img/shop1.png"
+    },
+    "11930" : {
+    "name" : "Суппорт переднего тормоза",
+    "cost" : "1100",
+    "description" : "Плотно фиксирует тормоза на передней оси",
+    "image" : "pages/catalog/img/shop2.png"
+    },
+    "11931" : {
+    "name" : "Седение",
+    "cost" : "900",
+    "description" : "Уневерсальное",
+    "image" : "pages/catalog/img/shop3.png"
+    },
+    "11932" : {
+    "name" : "Педали",
+    "cost" : "1400",
+    "description" : "Уневерсальные",
+    "image" : "pages/catalog/img/shop4.png"
+    }
+}

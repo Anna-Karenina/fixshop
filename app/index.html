@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>bikeShopBS</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="js/aos/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Old+Standard+TT:400,700|Ubuntu:300,300i,400&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oranienbaum&amp;subset=cyrillic" rel="stylesheet">
+    </head>
+<body class="no-gutters">    
+   
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand logo" data-aos="fade-up" href="#"> fixedShop *</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">*</span>
+      </button>
+
+<div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Компоненты
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_frame">Фреймсеты</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_seats">Седла</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_strwheel">Рули и обмотки</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_brakes">Тормоза</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_wheels">Покрышки и колеса</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_pedal">Педали</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_hardware">Hardware</button>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/catalog/fullcatalog.html">Полный каталог</a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Велосипеды
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_fixedandSS">Фиксы и сингл спиды</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_citybike">Городские велосипеды</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_routbike">Шоссейные велосипеды</button>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/catalog/fullcatalog.html">Полный каталог</a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Аксессуары
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_assist">Держатели для велосипеда</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_bags">Сумки и рюкзаки</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_tools">Инструменты</button>
+                <button class="btn_basket dropdown-item" id="btn_modal_catalog_other">Другие аксессуары</button>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/catalog/fullcatalog.html">Полный каталог</a>
+            </div>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="pages/aboutus/about.html">Контакты</a>
+          </li>
+          
+        </ul>            
+        
+        <div class="inline">
+                    
+         <button class="btn_basket" id="btn_modal_login">
+           <i class="far fa-user-circle"></i> Вход</button>
+                    
+              <div id="login_modal" class="login_modal center">
+              <div class="login_modal_content">     
+               <h5>Войти</h5>
+                 <form action="post">
+                  <input type="text" placeholder="Логин">
+                  <input type="password" autocomplete placeholder="Пароль">
+                  <input type="submit" value="Вход" class="btn_shop"><br><br>
+                    <a href="pages/admin/admin.html"> нет аккаунта?</a><br>
+                  <a href="">Зарегистрироваться</a><br><br>
+                 </form>
+             </div>
+            </div>
+            
+                           
+        <button class="btn_basket" id="btn_modal_basket">
+          <i class="fa fa-shopping-basket"></i> корзина  <span class="mini_basket"></span>   
+         </button>
+          
+
+        </div>
+                     
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-success my-2 my-sm-0 btn-primary" data-toggle="modal" data-target="#seach" type="button"><i class="fas fa-search"></i></button>
+        </form>
+        
+      </div>
+    </nav> 
+             
+     <div  class="container-fluid">  
+            <div class="row no-gutters justify-content-center">
+             <div class="col-lg-auto  col-sm-auto landing_discription">
+                 <h2>Жизнь это как езда на велосипеде<br>если тебе легко значит ты катишься вниз.</h2>
+                 <h3>Фикс гир: красота минималистичность простота и изящество.</h3>
+                <div class="container center">
+                     <div data-toggle="modal" data-target="#cult">
+                     <a href="#" class="btn" onclick="return false;">
+                     Читать еще</a>
+                     </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </header>
+     
+    <section>
+        <div class="container-fluid">
+            <div class="row no-gutters justify-content-center">
+               <div class="col-md-3 align-self-center  ">
+                   <h3 class="section_header">Что такое велосипед fixed gear? Почему стоит купить велосипед с фиксированой передачей?</h3>
+                   <p id="about">Велосипед фиксед гир (англ. fixed gear) велосипед с фиксированной передачей, у которого в конструкции нет свободного хода, и колеса при езде продолжают крутиться, даже если мы перестаем крутить педали.<br><br><br><br>Фикс велосипеды устроены просто: при движении педали вращаются всегда! Это заставляет педали крутиться при вращении колеса, причем как при езде вперед, так и при движении назад.<br><br> Другое название подобных моделей — fixed gear bike.
+                   </p>
+                   <a class="btn_story" href="#" onclick="	return false;">Читать еще</a>
+               </div>
+               <div class="col-md-4 oldbike">
+                   <img id="oldbike" src="images/bikepic.jpg" alt="">
+               </div>
+                
+            </div>
+            <div class="row no-gutters justify-content-start history">
+                <div class="col-md-4-offset-1 ">
+                  <img src="images/hist.jpg" alt="" id="female_bike">
+                </div>
+                 <div class="col-md-3 align-self-center history_about">
+                     До 1950-х фиксы были обычным явлением, пока фиксовая лихорадка не завладела велосипедистами. В любом случае, мы не собираемся здесь давать урок по истории велосипедов, а более подробно поговорим о том, как фиксы вернулись в моду, или об их современной истории.
+                     <br><br><br>
+                        <div data-toggle="modal" data-target="#blog">
+                         <a href="#" class="btn_shop">
+                         Читать еще</a></div>
+                         </div>
+            </div>
+            <div class="advantage">
+              <div class="row no-gutters justify-content-center">
+               <div class="col-md-11">
+                <h3>Преимущества велосипедов имеющих Fixed gear</h3>
+                   <p>Велосипед Fixed gear привлекателен уже одним только внешним видом. Он изящный, минималистичный, простой в обслуживании. А множество интересных особенностей делают его достойной альтернативой привычных классических велосипедов.</p>
+                </div>
+              </div>
+              <div class="row no-gutters justify-content-start">
+                  <div class="col-lg-10  bikebone">
+                      
+                         <div data-toggle="modal" data-target="#fourzoom">
+                          <img src="images/pin.png" alt="" class="pin1" >
+                      </div><div data-toggle="modal" data-target="#fist">
+                          <img src="images/pin.png" alt="" class="pin2" >
+                      </div><div data-toggle="modal" data-target="#secondzoom">
+                          <img src="images/pin.png" alt="" class="pin3">
+                      </div><div data-toggle="modal" data-target="#three">
+                      <img src="images/pin.png" alt="" class="pin4" ></div>
+                         <div data-toggle="modal" data-target="#tredzoom">
+                             <img src="images/pin.png" alt="" class="pin5"></div>
+                  </div>
+                  <div class="col-lg-2 align-self-center zoom">
+                          
+                        <div data-toggle="modal" data-target="#fist">
+                            <img src="images/4@1x.jpg" alt="">
+                        </div>
+                         
+                        <div data-toggle="modal" data-target="#secondzoom">
+                           <img src="images/1.png" alt="" id="zoom">
+                         </div>
+
+                        
+                         <div data-toggle="modal" data-target="#three">
+                              <img src="images/5@1x.jpeg" alt="">
+                        </div>
+                        
+                        <div data-toggle="modal" data-target="#fourzoom">
+                              <img src="images/2.png" alt="">
+                        </div>
+
+                        <div data-toggle="modal" data-target="#tredzoom">
+                              <img src="images/3.png" alt="">
+                        </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+        </section>
+    
+        <!---------BLOG--->    
+        <main>
+          <div class="container">
+           <div class="row main">
+            <div class="row">
+               <div class="main__title">
+                <h3>daily blog</h3></div>
+                <div class="mostreading">
+                <h4>Топ за
+                <button class="sorting">Неделю</button>/<button class="sorting">месяц</button>/<button class="sorting">год</button></h4></div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-7 blog_cards ">
+                    <img src="images/modalHelper/2blog.jpg" alt="">
+                    <h3 class="main_heder">Ультимативный гид по этому вашему «Фикседгиру». Или как купить первый вел и не облажаться.</h3> 
+                   <p class="content">Зима вроде постепенно подходит к концу, а сезон в свою очередь близится к открытию. В честь этих радостных нашему сердцу событий и во избежание многих вопросов от новичков, которые в этот момент заполняют группу, мы решили сделать большой гайд по подборке велосипеда, запчастей, формы и аксессуаров.
+                   <a href="">Читать дальше...</a></p>
+                    <i class="fas fa-comment-dots"></i>
+                   <i class="far fa-thumbs-up"></i>
+                </div>
+                <div class="col-lg-3 offset-1 bgcw_aside">
+                   <div class="flex-container">
+                    <a>первая лента новостей</a>
+                    <a>вторая лента новостей</a>
+                    <a>четвертая лента новостей</a>
+                    <a>пятая лента новостей</a>
+                </div></div>
+            </div>
+          </div>
+          </div>
+        </main>      
+
+   <!---------SHOP MOBILE ONLY start-->     
+        
+    <article class="shopmobile">
+       <div class="container">
+        <div class="row no-gutters justify-content-center">
+            <h3>Топ Этой Недели</h3>
+               
+      <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+       
+        <div class="carousel-item active">
+          <div class="d-block w-100 shopcard">
+              <img id="shoppic" src="images/1%20(1).png" alt="">
+                <p>Коретка фикс передачи</p>
+                    <p>230 $</p>
+                    <a class="btn_shop" href="#">купить</a>
+                </div>    
+       </div>
+       
+        <div class="carousel-item">      
+                <div class="d-block w-100 shopcard">
+                    <img  id="shoppic" src="images/2%20(1).png" alt="">
+                    <p>Передние тормозные скобы</p><p>120$</p>
+                    <a class="btn_shop" href="#">купить</a>
+                </div>
+        </div>
+        
+        <div class="carousel-item">
+           <div class="d-block w-100">
+                <img id="shoppic"  src="images/3%20(1).png" alt="">
+                    <p>Ультро лекгое сидение</p>
+                    <p>420$</p><a class="btn_shop" href="#">купить</a>
+                </div>  
+        </div>
+           
+         <div class="carousel-item">
+                <div class=" d-block w-100 shopcard">
+                    <img id="shoppic"  src="images/4.png" alt=""><p>Керамические педали</p>
+                    <p>380$</p><a class="btn_shop" href="#">купить</a>  
+                </div>
+        </div>
+      </div>           
+
+               
+               
+                </div>
+            </div>
+        </div>
+    </article> <!---------SHOP MOBILE ONLY END_________-->
+        
+    <article class="shop">
+       <div class="container">
+        <div class="row no-gutters justify-content-center">
+            <h3>Аксессуары для фикс байка</h3>
+            <p id="p">Хотя велосипеды с фиксированной передачей и просты в обслуживании, базовые инструменты и аксессуары никогда не будут лишними в вашем арсенале. А такие вещи, как набор шестигранников, ключ и насос — просто обязаны быть у вас под рукой.
+            </p>
+                   
+                    <div class="shopcardi"></div>
+            
+            </div>
+        </div>
+    </article>
+
+   <!---------------SHOP1111111. END--------->
+    <footer>
+        <div class="container-fluid">
+           <div class="row no-gutters justify-content-center">
+               <div class="col-md-5 col-lg-6 col-sm-10 subscribe" data-aos="zoom-out-up" data-aos-duration="22">
+                  <form id="formsub" action="">
+                   <h3 class="non">Подписка на блог и акции магазина</h3>
+                   <p class="non">Ваши вопросы, пожелания, предложения принимаем по электронной почте: <a id="mailto" href="mailto:mail@myfixedgear.ru">наша почта</a> или напишите его ниже <br><br><textarea name="comments" rows="2" cols="29"></textarea></p>
+                   </form>
+               </div>
+           </div>
+           
+           <div class="row no-gutters map_copyright">
+               <div class="col-sm-1 col-md-5 col-lg-2 offset-1 footer__navig">
+                    <h5>Навигация по сайту</h5>
+                    <ul>
+                        <li>Каталог</li>
+                        <li>О нас</li>
+                        <li>Блог</li>
+                        <li>Корзина</li>
+                        <li>Подписка</li>
+                    </ul>
+               </div>
+               <div class="col-xs-5 col-md-5 col-lg-2 offset-1 footer_social">
+                <h5>мы в соц.сетях</h5>
+                    <ul>
+                        <li><i class="fab fa-instagram"></i> Instagram</li>
+                        <li><i class="fab fa-facebook"></i> facebook</li>
+                        <li><i class="fab fa-twitter"></i> twitter</li>
+                        <li><i class="fab fa-github"></i> github</li>
+                        <li><i class="fab fa-vk"></i> Вконтакте</li>
+                    </ul>                   
+               </div>                  
+               </div>
+           </div>
+                    <div class="copyright">
+                           <h4>&copy; 2019, fixed gear shop AnnaKareninaView
+                 <br/>
+                Все торговые марки, которые появляются на данном сайте, являются собственностью их владельцев.</h4></div>
+    </footer>
+    
+    
+    <!-- Modal -->
+        <div class="modal fade" id="fist" tabindex="-1" role="dialog" aria-labelledby="fist" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="images/4@4x.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="secondzoom" tabindex="-1" role="dialog" aria-labelledby="fist" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="images/1@4x.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="three" tabindex="-1" role="dialog" aria-labelledby="fist" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="images/5@4x.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="fourzoom" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="images/2@4x.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="tredzoom" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="images/3@4x.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+            <div class="modal fade" id="cult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5>Особая культура Fixed Gear</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Культура Fixed GearFixed Gear, или фиксы, покорили сердца любителей велоспорта и обыкновенных обывателей. <br><br>От других моделей велосипедов фиксы отличаются в первую очередь легкой рамой, отсутствием тормозов, тонкими колесами и наличием фиксированной передачи. Такая конструкция позволяет развивать максимальную скорость за короткий промежуток времени. <br><br>Сегодня Fixed Gear — это не просто средство передвижения, а особая культура, объединяющая людей по всему миру. В США и Японии фиксы давно стали синонимом скорости и свободы. Теперь эти велосипеды стремительно завоевывают Россию.</p>
+                  </div>
+                  <div class="modal-footer">
+                  <br><br><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="modal fade" id="blog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Выбор велосипеда</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Прежде всего, необходимо определиться с тем, для чего вам нужен велосипед. Многие проблемы исходят как раз из неправильной оценки необходимости того или иного велика. Если вы ищете велик для неспешных прогулок по парку пару раз в неделю или поездки с утра за кофе, то у меня для вас плохие (относительно) новости — фиксед гир, скорее всего, вам не нужен и стоит переключить свой интерес на удобный сингл-спид велосипед или городской комьютер, он подойдёт вам на 100%. Если вы уже на таком покатались, а жажда новых эмоций заполняет вас всё больше и больше, вы хотите попробовать что-то, казалось бы, обыденное, но в тоже время необычное и новое, то мир фиксед гира ждёт вас!</p>
+                    <img src="images/modalHelper/3.jpg" alt="">
+                    <p>После того, как вы решили, что фикс просто необходим, есть два пути: приобрести уже готовый велосипед, либо собирать его самому. На роль первого велосипеда отлично подойдет уже готовый комплит и по мере необходимости, вы сможете менять на нем какие-либо запчасти. Среди готовых комплитов можем порекомендовать такие бренды как: Fuji(Classic Track, Declaration), Throne, Aventon, Zycle Fix(Prime), Merida. Это всё неплохие начальные велосипеды стоимостью от 20 до 40 тысяч рублей.</p>
+                    <img src="images/modalHelper/4.jpg" alt="">
+                    <p>Не стоит сбрасывать со счетов и рынок б/у велосипедов, здесь список брендов гораздо шире и стоит отталкиваться от вашего бюджета и визуальных предпочтений. Основной совет, который мы можем дать — это избегать разноцветно-кислотных великов с авито и других мутных сайтов. Так же мы не рекомендуем велосипеды марки ХВЗ в роли первого байка и уж точно не советуем собирать фиксы на шоссейных рамах.
+                    Почему же «Фуджи»? Во-первых это 100% совместимости с современными запчастями и вам удастся избежать «колхоза» со стачиванием подседелов до 25.0 мм, перенарезки резьбы в каретке и поиском рулевых под этот ваш «ХВЗ Рекорд». Во-вторых, это универсальная база, на которой можно собрать почти все что угодно, даже стильную месслайф-тачку.…</p>
+                  </div>
+                  <div class="modal-footer">
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+
+     
+<div class="modal fade" id="seach" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <h5 class="modal-title" id="exampleModalLabel">Поиск по сайту</h5>
+          <div class="modal-body">
+          <input class="form-control mr-sm-2" type="search" placeholder="Ввидите интересующий запрос" aria-label="Search">
+          </div>
+        <button type="button" class="btn btn-secondary">Найти <i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</div>
+
+<!--
+       ```````````````модалкка корзины`````````````````
+-->
+        <div id="modal_basket" class="modal_basket">
+           <div class="basket_modal_content">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-7">
+                      <h3>Корзина твоих ништяков</h3></div>
+                    <div class="col-lg-5">
+                        <h3>Оформление заказа</h3>
+                    </div>
+               </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="basket_create">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        1
+                    </div>
+                    <div class="col-lg-5">
+                        5
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 summaru">
+                       <p>Стоимость товаров:</p>
+                       <p>Стоимость услуг:</p>
+                       <p>Итого : <span  class="sumAll"> </span></p>
+
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div> 
+
+<!--
+       ```````````````модалкка каталога компоненты ````````````````````````````````    
+       ```````````````модалкка каталога компоненты ->фреймсеты ````````````````````
+-->
+
+              <div id="modal_catalog_window" class="modal_catalog_frame">
+              <div class="frame_modal_content"> 
+              <h5>Топовые Фреймсеты под любые задачи</h5>
+                <div id="fs" class="wr"></div>
+                <div id="seats" class="wr"></div> 
+                <div id="strwhl" class="wr"></div> 
+                <div id="pedal" class="wr"></div> 
+                <div id="brake" class="wr"></div> 
+              
+				  </div></div>
+				
+             
+            
+
+
+      <!-- Modal -->
+
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">        </script>
+    <script src="js/aos/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="pages/catalog/catalogload.js"></script>
+    <script src="js/basketlogic.js"></script>
+    
+</body>
+</html>

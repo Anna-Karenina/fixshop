@@ -1,0 +1,723 @@
+// font-family: 'Old Standard TT', serif;
+//font-family: 'Ubuntu', sans-serif;
+//font-family: 'Dancing Script', cursive; 
+//font-family: 'Oranienbaum', serif;
+
+@import '_mixinas.sass'
+@import '_functions.scss'
+@import '_variables.scss'
+@import '_breakpoints.scss'
+@import '_mixins.scss'
+@import '_media.scss'
+@import '_mainmedia.sass'
+
+
+/*---------ОСНОВНЫЕ НАСТРОЙКИ------------*/
+.adm
+    font-size: 20px
+.dropdown
+    &:focus-within
+        background-color: #333
+        font-weight: 400
+        font-size: 16px
+        transition: 0.3s
+    
+.dropdown-menu 
+    text-align: center
+    left: -35px
+    &:hover a
+                background-color: #333
+    
+body 
+    font-family: 'Ubuntu', sans-serif
+    font-size: 8px
+    color: #333
+    line-height: 1.6
+    margin: 0
+    display: block
+hr
+    z-index: 999
+    border-top: 2px solid #F5BE74
+    
+.center
+    text-align: center
+  
+.modal-body
+    padding: 0
+
+#cult h5 
+    font-size: 28px
+    font-family: 'Old Standard TT', serif
+    font-weight: 400
+
+#cult p 
+    font-size: 18px
+    font-family: 'Old Standard TT', serif
+    font-weight: 300
+    padding: 10px
+    /*--------BUTTINS----------->*/
+
+.btn
+    @include btn
+    display: flex
+    margin-top: 22px
+    display: inline-block
+    vertical-align: top
+    border: 2.5px solid aliceblue
+    color: aliceblue
+    &:hover 
+        background-color: #fff
+        color: #333
+
+.btn_story
+    @include btn
+    color: #333
+    margin-top: 98px
+    text-decoration: none
+    display: inline-block
+    vertical-align: bottom
+    border: 2.5px solid #333
+    padding: 8px 45px
+    &:hover 
+        background-color: #333
+        color: #fff
+        text-decoration: none
+
+.btn_shop
+    @include btn
+    outline: none
+    color: #333
+    margin: 0px 0px 20px 0px
+    display: inline-block
+    vertical-align: bottom
+    border: 2.5px solid #333
+    padding: 8px 45px
+    &:hover
+        background-color: #333
+        color: #fff
+        text-decoration: none
+.far
+    padding: 5px 5px
+.fa
+    padding: 5px
+.btn_basket 
+    display: inline-flex
+    text-transform: uppercase
+    font-size: 14px
+    font-family: "Ubuntu", sans-serif
+    font-weight: 400
+    border: none
+    background-color: transparent
+    color: aliceblue
+    transition: color.2s linear
+    vertical-align: top
+    margin: 0 15px
+    position: relative
+    &:hover 
+        color: #F5BE74
+        background-color: transparent
+        cursor: pointer
+    &:after
+        content: ""
+        height: 3px
+        width: 100%
+        opacity: 0
+        background-color: #F5BE74
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 1
+        transition: .3s linear
+    &:hover:after 
+        opacity: 1
+ 
+.btn_blog
+    @include btn
+    color: #333
+    margin: 0px 0px 20px 0px
+    display: inline-block
+    vertical-align: bottom
+    border: 1.5px solid #333
+    padding: 6px 10px
+    &:hover
+        background-color: #333
+        color: #fff
+        text-decoration: none
+.btn-primary 
+    background-color: transparent
+    border: 2px solid aliceblue
+    &:hover    
+        background-color: #333 
+        color: aliceblue
+        border-color: aliceblue
+.goods-option 
+    display: inline-flex
+    text-transform: uppercase
+    font-size: 12px
+    font-family: "Ubuntu", sans-serif
+    font-weight: 400
+    border: none
+    background-color: transparent
+    color: #333
+    vertical-align: top
+    padding: 0
+    margin: 0
+    position: relative
+    &:hover 
+        color: #F5BE74
+    &:change
+        border: none
+        outline: none
+    &focus 
+        outline: 0 !important
+
+/*----------PINS------------------------------*/
+.pin1
+    @include pin
+    top: 544px
+    left: -335px
+.pin2
+    @include pin
+    top: 93px
+    left: -201px
+.pin3
+    @include pin
+    top: 163px
+    left: 211px
+.pin4
+    @include pin
+    top: 63px
+    left: 355px
+.pin5
+    @include pin
+    top: 450px
+    left: -55px
+
+/*----------PINS- end-----------------------------*/
+.inline
+    display: flex
+    flex-direction: column
+.modali
+    display: none
+    position: fixed
+    z-index: 1
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    overflow: auto
+    background-color: rgba(0,0,0,8)
+.modali-content
+    background-color: #fefefe
+    margin: 15% auto
+    padding: 20px
+    border: 1px solid #888
+    width: 80%
+#p
+    padding-bottom: 12px
+
+header 
+    background-image: url(../images/landingbg.jpg)
+    height: 100vh
+    background-position: center center
+    background-repeat: no-repeat
+    &:before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        background-color: #3C3C3C
+        opacity: 0.6  
+
+.menu
+    background-color: transparent
+    text-transform: uppercase
+    font-size: 18px
+    font-family: 'Ubuntu', sans-serif
+    font-weight: 400
+    color: aliceblue
+    align-items: center
+    width: 100%
+    a
+        text-decoration: none
+        color: aliceblue
+        transition: color.2s linear
+        display: inline-block
+        vertical-align: top
+        margin: 0 15px
+        position: relative
+        &:hover 
+            color: #F5BE74
+        &:after
+            content: ""
+            height: 3px
+            width: 100%
+            opacity: 0
+            background-color: #F5BE74
+            position: absolute
+            top: 100%
+            left: 0
+            z-index: 1
+            transition: .3s linear
+        &:hover:after 
+            opacity: 1
+
+//-------NAVBAR--------
+.logo
+    font-family: 'Dancing Script', cursive
+    text-transform: none
+    font-size: 52px
+    
+    
+.menuselect 
+    font-size: 14px
+    ul 
+        list-style-type: none
+        margin: 0
+    li
+        display: inline-block
+        margin-right: 30px
+
+
+.landing_discription 
+    text-align: center
+    padding-top: 150px
+    color: aliceblue
+    font-family: 'Old Standard TT', serif
+    h2
+        font-weight: 300
+        font-size: 36px
+    h3
+        font-weight: 300
+        font-size: 20px
+
+section
+    padding: 40px 0px 0px 0px
+    line-height: 1.6
+
+#oldbike
+    padding-left: 20px
+    width: 430px
+    height: 540px
+    transition: 0.4s
+    &:hover
+        transform: scale(1.1)
+
+.section_header
+    color: #3c3c3c
+    font-family: "Old Standard TT"
+    font-size: 19px
+    font-weight: 700
+
+
+#about
+    font-family: 'Old Standard TT', serif
+    font-weight: 300
+    font-size: 12px
+    transition: 0.5s
+    &:hover
+        font-size: 14px
+
+.history
+    padding-top: 30px
+
+
+#female_bike
+    margin-left: -15px
+
+.history_about
+    font-weight: 300
+    font-size: 10px
+    margin-bottom: 210px
+    margin-right: 100px
+    border-left: .8px dotted
+    padding-left: 5px
+    font-style: italic
+    transition: 0.2s
+    
+
+.history_about:hover 
+    font-size: 14px
+//---------ПРИМУЩЕСТВА-------
+.advantage 
+    text-align: center
+    font-family: 'Old Standard TT', serif
+    h3
+        margin-bottom: 0px
+        font-size: 30px
+        font-weight: 700
+    p
+        font-size: 16px
+        font-weight: 400
+    img
+        padding: 0px
+        
+.bikebone
+    background-image: url(../images/bike.jpg)
+    background-repeat: no-repeat
+    z-index: 0
+    padding-bottom: 30px
+    background-size: cover
+
+.zoom
+    img
+        padding-bottom: 20px
+        padding-right: 0
+        position: relative
+        cursor: pointer
+    &::hover
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        background-color: #3C3C3C
+        opacity: 0.7
+    &:last-child
+        padding-bottom: 40px
+
+
+/*--------ПОМОЩЬ В Подборе--------
+
+//--------БЛОГ-------
+
+
+.bgcw
+    height: 94%
+.flex-container  
+    display: flex
+    flex: 1 1 auto
+    background-color: #fff
+    flex-direction: column
+    a
+        font-size: 14px
+        padding: 0
+        margin: 0
+        padding: 43px
+        max-height: 100px
+        border: 1px solid #333
+        &:hover 
+            color: white
+            cursor: pointer
+            background-color: #fff
+            
+main
+    font-size: 30px
+    font-weight: 700
+    background-color: #fff   
+    margin-bottom: 40px
+    font-family: Circle, sans-serif
+    font-weight: 400
+
+.main__title
+    display: flex
+    margin-left: 80px
+    margin-top: 30px
+    font-family: 'Old Standard TT', serif
+    font-weight: 700
+    h3
+        font-size: 49px
+.mostreading
+    display: flex
+    h4
+        margin-left: 540px
+        font-size: 16px
+        text-transform: uppercase
+        font-weight: 400
+        margin-top: 70px
+    
+.main
+    padding-top: 8px
+    background-color: rgb(243,243,243)
+
+    
+.blog_cards
+    
+    background-color: #fff  
+    margin: 25px
+    border: 1px solid rgba(0, 0, 0, 0.125)
+    border-radius: 0 .25rem
+    transition: 0.4s
+    padding: 0px
+    padding-right: -1px
+    box-shadow: 0 0 30px rgba(0,0,0,.3)
+    a
+        text-decoration: none
+        color: #b2a8a8
+        font-size: 16px
+        font-family: 'Old Standard TT', serif
+        &:hover 
+            color: #333
+
+
+    img
+        border: 0px solid rgba(0, 0, 0, 0.125)
+        border-radius: 0.25rem
+        width: 664px
+
+    h3
+        padding-top: 5px
+        font-size: 19px
+        font-weight: 700
+    p
+        font-size: 14px
+        font-weight: 400
+    &:hover
+        transform: scale(1.02)   
+    
+.sorting
+    padding: 0
+    text-transform: uppercase
+    border: none
+    font: inherit
+    color: #b2a8a8
+    background-color: transparent
+    cursor: pointer
+    font-weight: 400
+    font-size: 16px
+    &:active
+        color: #333
+    &:focus
+        border: none
+
+//--------БЛОГ конец-------
+
+
+/*-------SHOP--------*/
+
+article 
+    font-family: 'Old Standard TT', serif 
+    text-align: center
+    h3
+        margin-bottom: 0px
+        font-size: 30px
+        font-weight: 700
+    p
+        margin-top: 20px
+        font-size: 14px
+        font-weight: 400
+.shopcardi
+    display: inline-flex
+    .card
+        margin-left: 10px
+        max-width: 18vw
+        &:hover
+            transform: scale(1.05)
+    
+.shopcard
+    display: inline-flex
+    padding-bottom: 30px
+    transition: 0.3s
+    padding-right: 20px
+p
+    font-size: 18px
+
+#shoppic
+    height: 208px
+    padding-left:  1px
+    padding-bottom: 20px
+
+    
+/*-------footer--------*/
+footer 
+    ul
+        list-style: none
+    padding-top: 40px
+    background-image: url(../images/bg4ooter.jpg)
+    background-size: cover 
+    background-position: center top
+    background-repeat: no-repeat
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        background-color: #3C3C3C
+        opacity: 0.7
+
+.subscribe
+    background-color: rgba(113, 113, 113, 0.51)
+    box-shadow: -2px 3px 20px 2px black
+    text-align: center
+    margin-top: 80px
+    margin-bottom: 60px
+    position: relative
+    color: #fff
+    z-index: 999
+    h3
+        font-family: "Old Standard TT"
+        font-size: 30px
+        font-weight: 400
+        opacity: 1
+    p
+        font-family: Ubuntu
+        font-size: 16px
+        font-weight: 300
+        line-height: 28px
+
+form #formsub
+    padding: 45px 45px
+
+.copyright 
+    opacity: 1
+    margin-top: 26px
+    h4
+        color: #fff
+        text-align: right
+        font-style: italic
+        font-size: 14px
+        opacity: 0.6
+.map
+    padding: 10px
+.footer__navig
+    color: #ffffff
+    font-family: 'Oranienbaum', serif
+    font-size: 18px
+    font-weight: 400
+    letter-spacing: 1.08px
+    h5
+        padding-top: 20px
+    ul
+        font-size: 14px
+        
+.footer_social
+    color: #ffffff
+    font-family: 'Oranienbaum', serif
+    font-size: 18px
+    font-weight: 400
+    letter-spacing: 1.08px
+    h5
+        padding-top: 20px
+    ul
+        font-size: 14px
+//------футер конец--------   
+
+
+//---------модал-----
+#cult
+    .modal-content
+        margin: 10vh 0
+        color: aliceblue
+        background: url(../images/bg4cultmodal.jpg) no-repeat 
+        background-size: cover
+        &:before
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            top: 0
+            background-color: #3C3C3C
+            opacity: 0.7 
+        h5
+            margin-top: 3vh
+            z-index: 20
+
+.login_modal
+    display: none
+    position: fixed
+    z-index: 999
+    left: 0 
+    top: 0
+    width: 100%
+    height: 100%
+    overflow: auto
+    background-color: rgba(0,0,0,0.8)
+.login_modal_content
+    background-color: #fefefe
+    margin: 8% auto
+    border: 1px solid #888
+    width: 23%
+    color: #333
+    h5
+        padding-top: 10px
+    form
+        padding: 0
+        input
+            margin: 5px 0px
+            padding: 10px 40px
+    a
+        color: #333
+.modal_basket
+    display: none
+    position: fixed
+    z-index: 999
+    left: 0 
+    top: 0
+    width: 100%
+    height: 100%
+    overflow: auto
+    background-color: rgba(0,0,0,0.8)
+.basket_modal_content
+    background-color: #fefefe
+    margin: 8% auto
+    border: 1px solid #888
+    width: 76%
+    height: auto
+    color: #333
+    form
+        padding: 0
+        input
+            margin: 5px 0px
+            padding: 10px 40px
+    a
+        color: #333
+.basket_mini_card
+    width: auto
+    height: auto
+    word-wrap: break-word
+    background-color: #fff
+    background-clip: border-box
+    border: 1px solid rgba(0, 0, 0, 0.125)
+    border-radius: 0.25rem
+    margin-bottom: 0.5vw
+    h5
+        padding-top: 1vw
+        margin: 0vw
+    .basket_xsimg
+        img
+            width: 100%
+            height: auto
+        
+    #stock
+        font-size: 12px
+.summaru
+    text-align: right
+    p
+        margin: 0
+        &:last-child
+            color: #ff4e00
+        
+
+
+
+//---------модал конец----
+
+
+//-----------fullcalogpage--------
+.catalog    
+    font-size: 20px
+    color: aliceblue
+//-----------fullcalogpage end--------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

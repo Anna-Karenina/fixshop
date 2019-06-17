@@ -1,0 +1,29 @@
+@mixin pin
+    position: relative
+    z-index: 999
+    border-radius: 50%
+    border: 3px solid #ebebeb
+    transition: 0.2s
+    &:hover 
+        border-color: greenyellow
+        cursor: pointer
+        transform: scale(1.1)
+
+@mixin btn
+    padding: 8px 30px
+    font-family: 'Old Standard TT', serif
+    text-transform: uppercase
+    transition:  background .3s linear, color .3s linear
+    z-index: 999
+    text-decoration: none
+    font-size: 14px
+    outline: none !important
+    &:hover
+        outline: none
+    &:active
+        outline: none
+    &:focus
+        outline: none
+    
+	
+	

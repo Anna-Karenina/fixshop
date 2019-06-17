@@ -1,0 +1,46 @@
+//AnnaKarenina adminMenuSass
+@import '_mixinas.sass'
+body
+	outline: none
+
+.container
+	background-image: url(../images/bgset.jpg)
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 100vh
+.amd 
+	font-family: "Ubuntu", sans-serif
+	font-size: 1vw
+	margin: 4% 0 3% 1vw
+	width: 32%
+	background-color: rgba(0,0,0,0.6)
+	border-radius: 5%
+.wraperForCardMenu
+	h2
+		text-align: center
+	color: #fff
+	display: grid
+	width: 20%
+	margin: 2%
+	input, select, textarea
+		padding-left: 1.3vw
+		border-radius: 10px
+		color: #fff
+		border: none
+		background-color: rgba(0,0,0,0.4)
+		outline: none
+		height: 1.4vw
+.add-to-db
+	@include btn
+	color: #333
+	margin: 3% 0 4% 1%
+	display: inline-block
+	vertical-align: bottom
+	border: 2.5px solid #333
+	
+	&:hover
+		background-color: #333
+		color: #fff
+		text-decoration: none
+		cursor: pointer

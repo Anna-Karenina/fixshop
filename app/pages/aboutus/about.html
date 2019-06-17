@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>bikeShopBS</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/aboutus.css">
+    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../js/aos/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Old+Standard+TT:400,700|Ubuntu:300,300i,400&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oranienbaum&amp;subset=cyrillic" rel="stylesheet">
+    </head>
+<body class="no-gutters">    
+   
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand logo" data-aos="fade-up" href="#"> fixedShop *</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">*</span>
+      </button>
+
+		<div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../index.html">На главную</a>
+				</li>
+				<li class="nav-item">
+				   <a class="nav-link" href="#">Контакты</a>
+				</li>  
+			</ul>                
+		<div class="inline">
+				<button class="btn_basket" id="btn_modal_login">
+					<i class="far fa-user-circle"></i> Вход
+				</button>               
+			 <div id="login_modal" class=" justify-content-center login_modal center">
+				<div class="login_modal_content">     
+					<h5>Войти</h5>
+						<form action="post">
+							<input type="text" placeholder="Логин">
+							<input type="password" autocomplete placeholder="Пароль">
+							<input type="submit" value="Вход" class="btn_shop"><br><br>
+								<a href="pages/admin/admin.html"> нет аккаунта?</a><br>
+								<a href="">Зарегистрироваться</a><br><br>
+						 </form>
+				 </div>
+			</div>                                 
+			   <button class="btn_basket" id="btn_modal_basket">
+				<i class="fa fa-shopping-basket"></i> корзина  <span class="mini_basket"></span>   
+			   </button> 
+		 </div>
+
+				<form class="form-inline my-2 my-lg-0">
+				  <button class="btn btn-outline-success my-2 my-sm-0 btn-primary" data-toggle="modal" data-target="#seach" type="button"><i class="fas fa-search"></i></button>
+				</form>        
+		</div>
+	</nav> 
+
+ <div class="container-fluid">
+	<div class="row no-gutters">
+		<div class="col-md-col-lg-2 subscribe" data-aos="zoom-out-up" data-aos-duration="22">
+			<div class="adrees">
+               <h3>Контакты</h3>
+               <div class="adr">
+			   <h4>Наш адрес:</h4>
+               <p>Чкаловский пр,  22</p>	
+               <p>Станция метро Чкаловская</p>
+               <h4>Режим работы</h4>
+               <p>ПН-ВС с 10:00 до 21:00г</p>
+               <h4>Телефон, WhatsUp</h4>
+               <p><a href="tel:+1234567890"> 7(812)222-22-22 </a></p><br>
+               </div>
+				<h4>Мы в соц.сетях</h4>
+					<div class="sociale">
+						<a href=""><span><i class="fab fa-instagram"></i></span></a>
+						<a href=""><span><i class="fab fa-facebook"></i></span></a>
+						<a href=""><span><i class="fab fa-twitter"></i></span></a>
+						<a href=""><span><i class="fab fa-vk"></i>  </span></a>
+           			</div>                		
+            </div>
+              <div class="row no-gutters justify-content-center">
+               
+                  <form id="formsub" action="">
+                   <h5 class="non">Подписка на блог и акции магазина</h5>
+                   <p class="non">Ваши вопросы и пожелания принимаем по почте <a id="mailto" href="mailto:mail@myfixedgear.ru">наша почта</a> или напишите его ниже<br><textarea name="comments" rows="2" cols="29"></textarea></p>
+                   </form>
+               
+           </div>
+              <div class="row no-gutters justify-content-center">
+               <div class="footer_navig">
+                    <h5>Навигация по сайту</h5>
+                    	<a href=""><span>Каталог</span></a>
+                    	<a href=""><span>О нас</span></a>
+                    	<a href=""><span>Блог</span></a>
+                    	<a href=""><span>Корзина</span></a>
+                    	<a href=""><span>Подписка</span></a>    
+               </div>
+			</div>
+    </div>
+			<div class="col-md-col-lg-9 offset-1 map" data-aos="zoom-out-up" data-aos-duration="22">
+				<script type="text/javascript" src="//maps-js.apissputnik.ru/v0.3/loader.js?1VHI4w8jphG"></script>
+			    <div class="copyright"><h4>&copy; 2019, fixed gear shop AnnaKareninaView<br/>
+		         Все торговые марки, которые появляются на данном сайте, являются собственностью их владельцев.</h4></div>
+			</div>
+	</div>
+</div>
+</header>
+     
+   <!---------------SHOP1111111. END--------->
+
+    
+    
+    <!-- Modal -->
+
+    
+
+     
+<div class="modal fade" id="seach" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <h5 class="modal-title" id="exampleModalLabel">Поиск по сайту</h5>
+          <div class="modal-body">
+          <input class="form-control mr-sm-2" type="search" placeholder="Ввидите интересующий запрос" aria-label="Search">
+          </div>
+        <button type="button" class="btn btn-secondary">Найти <i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</div>
+
+<!--
+       ```````````````модалкка корзины`````````````````
+-->
+        <div id="modal_basket" class="modal_basket">
+           <div class="basket_modal_content">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-7">
+                      <h3>Корзина твоих ништяков</h3></div>
+                    <div class="col-lg-5">
+                        <h3>Оформление заказа</h3>
+                    </div>
+               </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="basket_create">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        1
+                    </div>
+                    <div class="col-lg-5">
+                        5
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 summaru">
+                       <p>Стоимость товаров:</p>
+                       <p>Стоимость услуг:</p>
+                       <p>Итого : <span  class="sumAll"> </span></p>
+
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div> 
+
+<!--
+       ```````````````модалкка каталога компоненты ````````````````````````````````    
+       ```````````````модалкка каталога компоненты ->фреймсеты ````````````````````
+-->
+
+              <div id="modal_catalog_window" class="modal_catalog_frame">
+              <div class="frame_modal_content"> 
+              <h5>Топовые Фреймсеты под любые задачи</h5>
+                <div id="fs" class="wr"></div>
+                <div id="seats" class="wr"></div> 
+                <div id="strwhl" class="wr"></div> 
+                <div id="pedal" class="wr"></div> 
+              
+				  </div></div>
+				
+             
+            
+
+
+      <!-- Modal -->
+
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">        </script>
+    <script src="../../js/aos/dist/aos.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <script src="../../js/modal.js"></script>
+    <script src="../../pages/catalog/catalogload.js"></script>
+    <script src="../../js/basketlogic.js"></script>
+    
+</body>
+</html>

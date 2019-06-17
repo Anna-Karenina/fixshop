@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<link rel="stylesheet" href="../../css/component.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+  	<div class="container">
+   <nav class="navbar">
+        fixedShop       
+        
+        
+                    
+         <button class="btn_basket" id="btn_modal_login">
+           <i class="far fa-user-circle"></i> Вход</button>
+                    
+            
+                           
+        <button class="btn_basket" id="btn_modal_basket">
+          <i class="fa fa-shopping-basket"></i> корзина  <span class="mini_basket"></span>   
+         </button>
+	</nav>
+    
+     
+
+    
+	 <div class="amd">
+    	<div class="wraperForCardMenu">
+   	   	 <h2>Меню редактирования  товара</h2>
+    	  <div class="goods-out"></div>
+    	
+   	 id товара<input type="text" id="gid" placeholder="Не для редактирования, при создании устанавливается автоматически" readonly >
+     Имя товара <input type="text" id="gname">
+     Цена <input type="text" id="gcost">
+     Описание товара <textarea id="gdescr"></textarea>
+     Изображение только 290  x  200 <input type="text" id="gimg">
+     Порядок <input type="text" id="gorder">
+     Каталог <select id="gcat"><br>
+     	<option value="frames">ФРЕЙМСЕТЫ
+		<option value="seats">СЕДЛА
+		<option value="strwhl">РУЛИ И ОБМОТКИ
+		<option value="brake">ТОРМОЗА
+		<option value="wheel">ПОКРЫШКИ И КОЛЕСА?
+		<option value="pedal">ПЕДАЛИ 
+		<option value="hdr">HARDWARE
+		<option value="fixandsingle">ФИКСЫ И СИНГЛ СПИДЫ
+		<option value="citybike">ГОРОДСКИЕ ВЕЛОСИПЕДЫ
+		<option value="routebike">ШОССЕЙНЫЕ ВЕЛОСИПЕДЫ
+		<option value="wallhengers">ДЕРЖАТЕЛИ ДЛЯ ВЕЛОСИПЕДА
+		<option value="bags">сУМКИ И РЮКЗАКИ
+		<option value="tools">ИНСТРУМЕНТЫ 
+		<option value="other">ДРУГИЕ АКСЕССУАРЫ
+     </select>
+     
+  		     <button class="add-to-db">Обновить</button>    
+      </div>
+      </div>
+
+     
+ <!--    Изображение <input type="file" id="pic"><br>
+    <button class="create">Создать карту</button>-->  
+ <!--     ID Товара <input type="text" id="idProduct"><br>-->  
+    <script src="../../js/jquery.min.js"></script>
+    <script src="adm.js"></script>
+</div>
+</body>
+</html>    

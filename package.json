@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Anna-Karenina/fixshop/issues"
   },
-  "homepage": "https://github.com/Anna-Karenina/fixshop#readme"
+  "homepage": "https://github.com/Anna-Karenina/fixshop#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }

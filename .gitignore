@@ -115,5 +115,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+.package-lock.json
 
 # End of https://www.gitignore.io/api/osx,node
